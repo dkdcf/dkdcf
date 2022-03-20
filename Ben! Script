@@ -1,1 +1,1281 @@
-local a=game:GetService("UserInputService")local b=game:GetService("Workspace"):FindFirstChild("sfx")local c=game:GetService("Players").LocalPlayer;local d=game:GetService("Players")local e;local f=loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3"))()local g=f:CreateWindow("Main")local h=f:CreateWindow("Teleports")local i=g:CreateFolder("Ben")local j=g:CreateFolder("Survivor")local k=g:CreateFolder("LocalPlayer")local l=g:CreateFolder("Misc")local m=g:CreateFolder("Visuals")local n=h:CreateFolder("Ben's House")local o=h:CreateFolder("Tom's House")local p=h:CreateFolder("Lab")local q=h:CreateFolder("Radio Station")local r=game:GetService("Workspace"):FindFirstChild("RadioStation")local s={"Hammer","Axe","Red Key","Blue Key","Green Key","Wrench","C4","Yellow Key","White Key","Keycard","Purple Key","Tan Key","Taser","Black Key","Brown Key","Lockpick"}local t=game:GetService("Workspace"):FindFirstChild("House")local u={"Red Key","Wrench","Green Key","White Key","Yellow Key","Blue Key","Purple Key","Taser","Black Key","Brown Key","Hammer"}local v=game:GetService("Workspace"):FindFirstChild("TomsCrib")local w={"Red Key","White Key","Saw","Keycard","Red Key","Black Key","Taser","Pink Key","Grey Key","Hammer","Axe","Drill","Purple Key","Blue Key","Yellow Key","Lockpick","Green Key","Brown Key","Tom Clue"}local x=game:GetService("Workspace"):FindFirstChild("Lab")local y={"Red Key","Lockpick","Blue Key","Wrench","Yellow Key","Pink Key","Purple Key","Teal Key","Brown Key","White Key","Key Card","Orange Key","Grey Key","Wire Cutters","Drill","Black Key"}i:Button("Kill Players",function()for z,m in pairs(game.Players:GetChildren())do if m~=lplr and m.Character~=nil and m.Character.Humanoid~=nil and m.Character.HumanoidRootPart~=nil then c.Character.HumanoidRootPart.CFrame=m.Character.HumanoidRootPart.CFrame;wait(0.35)end end end)j:Toggle("Remove Traps",function(A)while A==true do wait()for z,m in pairs(b:GetChildren())do if string.find(m.Name,"Trap")then m:Remove()end end end end)j:Dropdown("Lab Items",y,false,function(B)if e=="Lab"then if B=="Yellow Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keyyellow").CFrame;wait(1)fireclickdetector(game.Workspace.Lab.Keys.keyyellow.Part.ClickDetector)FireServer(game.Workspace.Lab.Keys.keyyellow.Part.ClickDetector.Fire)elseif B=="Pink Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keypink").CFrame;wait(1)fireclickdetector(game.Workspace.Lab.Keys.keypink.Part.ClickDetector)FireServer(game.Workspace.Lab.Keys.keypink.Part.ClickDetector)elseif B=="Brown Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keybrown").CFrame elseif B=="Orange Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keyorange").CFrame elseif B=="Drill"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("drill").CFrame elseif B=="Wrench"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("wrench").CFrame elseif B=="Blue Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keyblue").CFrame elseif B=="Green Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keygreen").CFrame elseif B=="Purple Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keypurple").CFrame elseif B=="Keycard"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keycard").CFrame elseif B=="White Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keywhite").CFrame elseif B=="Wire Cutters"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("cutters").CFrame elseif B=="Grey Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keygrey").CFrame elseif B=="Lockpick"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("lockpick").CFrame elseif B=="Red Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("keyred").CFrame elseif B=="Taser"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Lab.Keys:FindFirstChild("Taser").CFrame end end end)j:Dropdown("Ben's House Items",u,false,function(B)if e=="BensHouse"then if B=="Taser"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("Taser").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.Taser.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.Taser.Part.ClickDetector.Fire;C:FireServer()elseif B=="Red Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keyred").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector.Fire;C:FireServer()elseif B=="Blue Key"then c.Character.HumanoidRootPart.CFrame=game.Workspace.House.Keys:FindFirstChild("keyblue").CFrame;wait(1)fireclickdetector(game.Workspace.House.Keys.keyblue.Part.Clickdetector)local C=game.Workspace.House.Keys.keyblue.Part.Clickdetector.Fire;C:FireServer()elseif B=="Black Key"then c.Character.HumanoidRootPart.CFrame=game.Workspace.House.Keys:FindFirstChild("keyblack").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keyblack.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keyblack.Part.ClickDetector.Fire;C:FireServer()elseif B=="Brown Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keybrown").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keybrown.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keybrown.Part.ClickDetector.Fire;C:FireServer()elseif B=="Green Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keygreen").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keygreen.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keygreen.Part.ClickDetector.Fire;C:FireServer()elseif B=="Purple Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keypurple").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keypurple.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keypurple.Part.ClickDetector.Fire;C:FireServer()elseif B=="Red Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keyred").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector.Fire;C:FireServer()elseif B=="White Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("keywhite").CFrame;wait(1)fireclickdetector(game.Workspace.House.Keys.keywhite.Part.Clickdetector)local C=game.Workspace.House.Keys.keywhite.Part.Clickdetector.Fire;C:FireServer()elseif B=="Wrench"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("wrench").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys:FindFirstChild("wrench").Part.Clickdetector)local C=game:GetService("Workspace").House.Keys:FindFirstChild("wrench").Part.Clickdetector.Fire;C:FireServer()elseif B=="Hammer"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").House.Keys:FindFirstChild("hammer").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").House.Keys.hammer.Part.ClickDetector)local C=game:GetService("Workspace").House.Keys.hammer.Part.ClickDetector.Fire;C:FireServer()end end end)j:Dropdown("Radio Station Items",s,false,function(B)if e=="RadioStation"then if B=="Brown Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keybrown").CFrame elseif B=="Lockpick"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("lockpick").CFrame elseif B=="Taser"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("Taser").CFrame elseif B=="Black Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyblack").CFrame elseif B=="Tan Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keytan").CFrame elseif B=="Purple Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keypurple").CFrame elseif B=="White Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keywhite").CFrame elseif B=="Keycard"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keycard").CFrame elseif B=="Yellow Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyyellow").CFrame elseif B=="C4"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("c4").CFrame elseif B=="Green Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keygreen").CFrame elseif B=="Wrench"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("wrench").CFrame elseif B=="Blue Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyblue").CFrame elseif B=="Red Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyred").CFrame elseif B=="Hammer"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("hammer").CFrame elseif B=="Axe"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").RadioStation.Keys:FindFirstChild("axe").CFrame end end end)j:Dropdown("Tom's House Items",w,false,function(B)if e=="TomsHouse"then if B=="Red Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyred").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").TomsCrib.Keys.keyred.Part.ClickDetector)local C=game:GetService("Workspace").TomsCrib.Keys.keyred.Part.ClickDetector.Fire;C:FireServer()elseif B=="Taser"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("Taser").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.taaser.Part.Clickdetector)FireServer(game:GetService("Workspace").TomsCrib.Keys.Taser.Part.ClickDetector.Fire)elseif B=="Black Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblack").CFrame;wait(1)fireclickdetector(game:GetService("Workspace").TomsCrib.Keys.keyblack.Part.ClickDetector)local C=game:GetService("Workspace").TomsCrib.Keys.keyblack.Part.ClickDetector.Fire;C:FireServer()elseif B=="Saw"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("saw").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.saw.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.saw.Part.ClickDetector.Fire)elseif B=="White Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keywhite").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keywhite.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keywhite.Part.ClickDetector.Fire)elseif B=="Keycard"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblack").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keycard.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keycard.Part.ClickDetector.Fire)elseif B=="Pink Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keypink").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keypink.Part.ClickDetector)FireServer(game.Workspace.Keys.keypink.Part.ClickDetector.Fire)elseif B=="Grey Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keygrey").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keygrey.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keygrey.Part.ClickDetector.Fire)elseif B=="Hammer"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("hammer").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.hammer.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.hammer.Part.ClickDetector.Fire)elseif B=="Axe"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("axe").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.axe.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.axe.Part.ClickDetector.Fire)elseif B=="Drill"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("drill").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.drill.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.drill.Part.ClickDetector)elseif B=="Blue Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblue").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keyblue.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keyblue.Part.ClickDetector.Fire)elseif B=="Purple Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keypurple").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keypurple.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keypurple.Part.ClickDetector.Fire)elseif B=="Yellow Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyyellow").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.keyyellow.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.keyyellow.Part.ClickDetector.Fire)elseif B=="Lockpick"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("lockpick").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.Keys.lockpick.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.Keys.lockpick.Part.ClickDetector.Fire)elseif B=="Green Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keygreen").CFrame;wait(1)fireclickdetector(game.Workspace.TomsCrib.keygreen.Part.ClickDetector)FireServer(game.Workspace.TomsCrib.keygreen.Part.ClickDetector.Fire)elseif B=="Brown Key"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keybrown").CFrame;wait(1)fireclickdetector(game.Workspace.Keys.keybrown.Part.ClickDetector)FireServer(game.Workspace.Keys.keybrown.Part.ClickDetector.Fire)elseif B=="Tom Clue"then c.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("tomclue").CFrame;wait(1)fireclickdetector(game.Workspace.Keys.tomclue.Part.ClickDetector)FireServer(game.Workspace.Keys.tomclue.Part.ClickDetector.Fire)end end end)k:Slider("WalkSpeed",{min=17.5,max=100,precise=true},function(D)game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed=D end)k:Slider("JumpPower",{min=50,max=150,precise=true},function(D)game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower=D end)m:Button("ESP",function()local lplr=game.Players.LocalPlayer;local E=game:GetService("Workspace").CurrentCamera;local F=workspace.CurrentCamera;local G=F.worldToViewportPoint;local H=Vector3.new(0,0.5,0)local I=Vector3.new(0,3,0)for z,m in pairs(game.Players:GetChildren())do local J=Drawing.new("Square")J.Visible=false;J.Color=Color3.new(0,0,0)J.Thickness=3;J.Transparency=1;J.Filled=false;local K=Drawing.new("Square")K.Visible=false;K.Color=Color3.new(1,1,1)K.Thickness=1;K.Transparency=1;K.Filled=false;function boxesp()game:GetService("RunService").RenderStepped:Connect(function()if m.Character~=nil and m.Character:FindFirstChild("Humanoid")~=nil and m.Character:FindFirstChild("HumanoidRootPart")~=nil and m~=lplr and m.Character.Humanoid.Health>0 then local L,M=E:worldToViewportPoint(m.Character.HumanoidRootPart.Position)local N=m.Character.HumanoidRootPart;local O=m.Character.Head;local P,Q=G(F,N.Position)local R=G(F,O.Position+H)local S=G(F,N.Position-I)if M then J.Size=Vector2.new(1000/P.Z,R.Y-S.Y)J.Position=Vector2.new(P.X-J.Size.X/2,P.Y-J.Size.Y/2)J.Visible=true;K.Size=Vector2.new(1000/P.Z,R.Y-S.Y)K.Position=Vector2.new(P.X-K.Size.X/2,P.Y-K.Size.Y/2)K.Visible=true;if m.TeamColor==lplr.TeamColor then J.Color=Color3.new(0,1,0)K.Color=Color3.new(0,1,0)else J.Visible=true;K.Visible=true;J.Color=Color3.new(1,0,0)K.Color=Color3.new(1,0,0)end else J.Visible=false;K.Visible=false end else J.Visible=false;K.Visible=false end end)end;coroutine.wrap(boxesp)()end;game.Players.PlayerAdded:Connect(function(m)local J=Drawing.new("Square")J.Visible=false;J.Color=Color3.new(0,0,0)J.Thickness=3;J.Transparency=1;J.Filled=false;local K=Drawing.new("Square")K.Visible=false;K.Color=Color3.new(1,1,1)K.Thickness=1;K.Transparency=1;K.Filled=false;function boxesp()game:GetService("RunService").RenderStepped:Connect(function()if m.Character~=nil and m.Character:FindFirstChild("Humanoid")~=nil and m.Character:FindFirstChild("HumanoidRootPart")~=nil and m~=lplr and m.Character.Humanoid.Health>0 then local L,M=E:worldToViewportPoint(m.Character.HumanoidRootPart.Position)local N=m.Character.HumanoidRootPart;local O=m.Character.Head;local P,Q=G(F,N.Position)local R=G(F,O.Position+H)local S=G(F,N.Position-I)if M then J.Size=Vector2.new(1000/P.Z,R.Y-S.Y)J.Position=Vector2.new(P.X-J.Size.X/2,P.Y-J.Size.Y/2)J.Visible=true;K.Size=Vector2.new(1000/P.Z,R.Y-S.Y)K.Position=Vector2.new(P.X-K.Size.X/2,P.Y-K.Size.Y/2)K.Visible=true;if m.TeamColor==lplr.TeamColor then J.Visible=false;K.Visible=false else J.Visible=true;K.Visible=true end else J.Visible=false;K.Visible=false end else J.Visible=false;K.Visible=false end end)end;coroutine.wrap(boxesp)()end)for z,m in pairs(game:GetService("Workspace").NPCs:GetChildren())do local J=Drawing.new("Square")J.Visible=false;J.Color=Color3.new(0,0,0)J.Thickness=3;J.Transparency=1;J.Filled=false;local K=Drawing.new("Square")K.Visible=false;K.Color=Color3.new(1,1,1)K.Thickness=1;K.Transparency=1;K.Filled=false;function boxesp()game:GetService("RunService").RenderStepped:Connect(function()if m~=nil and m:FindFirstChild("Humanoid")~=nil and m:FindFirstChild("HumanoidRootPart")~=nil and m~=lplr and m.Humanoid.Health>0 then local L,M=E:worldToViewportPoint(m.HumanoidRootPart.Position)local N=m.HumanoidRootPart;local O=m.Head;local P,Q=G(F,N.Position)local R=G(F,O.Position+H)local S=G(F,N.Position-I)if M then J.Size=Vector2.new(1000/P.Z,R.Y-S.Y)J.Position=Vector2.new(P.X-J.Size.X/2,P.Y-J.Size.Y/2)J.Visible=true;K.Size=Vector2.new(1000/P.Z,R.Y-S.Y)K.Position=Vector2.new(P.X-K.Size.X/2,P.Y-K.Size.Y/2)K.Visible=true;J.Color=Color3.new(1,0,0)K.Color=Color3.new(1,0,0)J.Visible=true;K.Visible=true else J.Visible=false;K.Visible=false end else J.Visible=false;K.Visible=false end end)end;coroutine.wrap(boxesp)()end;game:GetService("Workspace").NPCs.ChildAdded:Connect(function()for z,m in pairs(game:GetService("Workspace").NPCs:GetChildren())do local J=Drawing.new("Square")J.Visible=false;J.Color=Color3.new(0,0,0)J.Thickness=3;J.Transparency=1;J.Filled=false;local K=Drawing.new("Square")K.Visible=false;K.Color=Color3.new(1,1,1)K.Thickness=1;K.Transparency=1;K.Filled=false;function boxesp()game:GetService("RunService").RenderStepped:Connect(function()if m~=nil and m:FindFirstChild("Humanoid")~=nil and m:FindFirstChild("HumanoidRootPart")~=nil and m~=lplr and m.Humanoid.Health>0 then local L,M=E:worldToViewportPoint(m.HumanoidRootPart.Position)local N=m.HumanoidRootPart;local O=m.Head;local P,Q=G(F,N.Position)local R=G(F,O.Position+H)local S=G(F,N.Position-I)if M then J.Size=Vector2.new(1000/P.Z,R.Y-S.Y)J.Position=Vector2.new(P.X-J.Size.X/2,P.Y-J.Size.Y/2)J.Visible=true;J.Color=Color3.new(1,0,0)K.Size=Vector2.new(1000/P.Z,R.Y-S.Y)K.Position=Vector2.new(P.X-K.Size.X/2,P.Y-K.Size.Y/2)K.Visible=true;K.Color=Color3.new(1,0,0)J.Color=Color3.new(1,0,0)K.Color=Color3.new(1,0,0)J.Visible=true;K.Visible=true else J.Visible=false;K.Visible=false end else J.Visible=false;K.Visible=false end end)end;coroutine.wrap(boxesp)()end;game:GetService("Workspace").NPCs.ChildAdded:Connect(function()end)end)end)j:Button("Collect Coins",function()repeat wait()for z,m in pairs(b:GetChildren())do if m.Name=="Coin"then firetouchinterest(m,c.Character.Head,0)end end until game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Left.Coins.Amount.Text=="20 / 20"or game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Left.Coins.Amount.Text=="40 / 40"end)l:Button("Remove Doors",function()if e=="RadioStation"then for z,m in pairs(game:GetService("Workspace").RadioStation.Doors:GetChildren())do if m:IsA("Part")then m.Transparency=1;m:Remove()end end elseif e=="Lab"then for z,m in pairs(game:GetService("Workspace").Lab.Doors:GetChildren())do if m:IsA("Part")then m.Transparency=1;m:Remove()end end elseif e=="BensHouse"then for z,m in pairs(game:GetService("Workspace").House.Doors:GetChildren())do if m:IsA("Part")then m.Transparency=1;m:Remove()elseif e=="TomsHouse"then for z,m in pairs(game:GetService("Workspace").TomsCrib.Doors:GetChildren())do if m:IsA("Part")then m.Transparency=1;m:Remove()end end end end end end)l:Button("Spectate",function()game:GetService("Players").LocalPlayer.PlayerGui.Main.Spectate.Visible=true end)l:Button("Redeem Codes",function()local T="release"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="danzlua"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="5klikes"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="10klikes"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="15klikes"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="25klikes"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)local T="35klikes"game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(T)end)l:DestroyGui()spawn(function()while wait()do if game.Workspace:FindFirstChild("RadioStation")then e="RadioStation"elseif game.Workspace:FindFirstChild("Lab")then e="Lab"elseif game.Workspace:FindFirstChild("House")then e="BensHouse"elseif game.Workspace:FindFirstChild("TomsCrib")then e="TomsHouse"end end end)spawn(function()local function U()while math.abs(c.Character.HumanoidRootPart.Velocity.Y)>0 do if c.Character.HumanoidRootPart.Position.Y<-100 then print("Falling")if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(15.85080337524414,-21.38637351989746,-409.0588073730469)elseif e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(227.72181701660156,10.663657188415527,809.138916015625)elseif e=="Lab"then elseif e=="RadioStation"then end end;wait(0.1)end end;c.Character.Humanoid.FreeFalling:Connect(U)end)n:Button("Spawn",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(18.60808753967285,-21.38637924194336,-404.3053283691406)end end)n:Button("Garage",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-26.598844528198242,-21.38637924194336,-403.24041748046875)end end)n:Button("Pantry",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-17.103628158569336,-21.386377334594727,-478.84515380859375)end end)n:Button("Bathroom",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(70.25204467773438,-21.38637924194336,-472.1925354003906)end end)n:Button("Garage Closet",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-25.697458267211914,-21.38637924194336,-444.22833251953125)end end)n:Button("Office",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-31.757863998413086,-7.13637638092041,-474.796875)end end)n:Button("Basement",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(21.478689193725586,-35.88638687133789,-429.50042724609375)end end)n:Button("Lobby",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(33.20632553100586,-21.38637924194336,-468.9964904785156)end end)n:Button("Master Bedroom",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(70.42231750488281,-7.136379241943359,-420.30364990234375)end end)n:Button("Laundry Room",function()if e=="BensHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(73.40637969970703,-6.886378765106201,-397.6668395996094)end end)o:Button("Garage",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(155.86109924316406,10.663657188415527,787.4840087890625)end end)o:Button("Laundry Room",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(123.96994018554688,10.663650512695312,800.1104736328125)end end)o:Button("Lobby/Kitchen",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(263.9756164550781,10.66365909576416,781.787353515625)end end)o:Button("Bathroom",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(194.2445526123047,25.16364288330078,773.9126586914062)end end)o:Button("Purple Bedroom",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(127.88211822509766,25.163658142089844,806.5255737304688)end end)o:Button("Blue Bedroom",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(189.002197265625,25.16364288330078,799.255126953125)end end)o:Button("Attic Closet",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(192.15748596191406,42.41365051269531,804.74755859375)end end)o:Button("Attic Safe Room",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(189.59825134277344,42.41364669799805,739.569091796875)end end)o:Button("Study Room",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(127.3779067993164,10.663657188415527,745.2557983398438)end end)o:Button("Outside",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(263.9928283691406,10.663660049438477,659.95751953125)end end)o:Button("Storage Room",function()if e=="TomsHouse"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(189.7828826904297,10.663657188415527,813.022216796875)end end)p:Button("Lab 2",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-120.83953857421875,52.74363708496094,27.32253074645996)end end)p:Button("Lab 1",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-83.2799301147461,52.74363708496094,44.63600540161133)end end)p:Button("Portal Room",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-50.314796447753906,59.4936408996582,-117.12982177734375)end end)p:Button("Gyro Chambers",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-117.54688262939453,52.74363708496094,-113.52072143554688)end end)p:Button("Storage Room",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(24.483957290649414,52.7436408996582,-15.643767356872559)end end)p:Button("Experiment Room",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(23.600370407104492,52.74363708496094,-39.30545425415039)end end)p:Button("Closet",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-126.5491943359375,68.24362182617188,27.937227249145508)end end)p:Button("Server Room",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-77.97293853759766,68.2436294555664,19.297149658203125)end end)p:Button("Lobby",function()if e=="Lab"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-40.58793258666992,52.7436408996582,-49.25660705566406)end end)q:Button("Studio",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-215.35609436035156,24.49802017211914,-163.04917907714844)end end)q:Button("Abandoned Office",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-40.55872344970703,24.24802017211914,-76.65613555908203)end end)q:Button("Green Closet",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-68.60458374023438,24.24802017211914,-135.9033660888672)end end)q:Button("Orange Closet",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-235.14663696289062,23.99802017211914,-69.94496154785156)end end)q:Button("Security Room",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-67.11686706542969,24.248022079467773,-162.14002990722656)end end)q:Button("Office",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-84.1773452758789,24.24802589416504,-73.16837310791016)end end)q:Button("Bathroom",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-197.72006225585938,23.99802589416504,-68.58779907226562)end end)q:Button("Meeting Room",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-48.332969665527344,24.24802017211914,-145.7962646484375)end end)q:Button("Equipment Room",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-135.28485107421875,24.24802017211914,-177.97674560546875)end end)q:Button("Lobby",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-196.775634765625,8.74802303314209,-124.39692687988281)end end)q:Button("Courtyard",function()if e=="RadioStation"then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-127.35194396972656,8.74802303314209,-138.83103942871094)end end)
+--UI Lib by : https://v3rmillion.net/member.php?action=profile&uid=507120
+-- Player ESP by : 0x83, I semi-modified it to work on Ben
+--UI lib release thread : https://v3rmillion.net/showthread.php?tid=1040650 (note: this UI lib has some issues. I can't fix them.)
+
+-- Script --
+local UserInputService = game:GetService("UserInputService")
+local sfx = game:GetService("Workspace"):FindFirstChild("sfx")
+local plr = game:GetService("Players").LocalPlayer
+local players = game:GetService("Players")
+
+local currentMap
+
+local library =
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3")))()
+
+local w = library:CreateWindow("Main") -- Creates the window
+local t = library:CreateWindow("Teleports")
+
+local b = w:CreateFolder("Ben") -- Creates the folder(U will put here your buttons,etc)
+local f = w:CreateFolder("Survivor")
+local l = w:CreateFolder("LocalPlayer")
+local m = w:CreateFolder("Misc")
+local v = w:CreateFolder("Visuals")
+local bTP = t:CreateFolder("Ben's House")
+local tTP = t:CreateFolder("Tom's House")
+local lTP = t:CreateFolder("Lab")
+local rTP = t:CreateFolder("Radio Station")
+
+local RadioStation = game:GetService("Workspace"):FindFirstChild("RadioStation")
+local radioItems = {
+    "Hammer",
+    "Axe",
+    "Red Key",
+    "Blue Key",
+    "Green Key",
+    "Wrench",
+    "C4",
+    "Yellow Key",
+    "White Key",
+    "Keycard",
+    "Purple Key",
+    "Tan Key",
+    "Taser",
+    "Black Key",
+    "Brown Key",
+    "Lockpick"
+}
+
+local benHouse = game:GetService("Workspace"):FindFirstChild("House")
+local benHouseItems = {
+    "Red Key",
+    "Wrench",
+    "Green Key",
+    "White Key",
+    "Yellow Key",
+    "Blue Key",
+    "Purple Key",
+    "Taser",
+    "Black Key",
+    "Brown Key",
+    "Hammer"
+}
+
+local tomHouse = game:GetService("Workspace"):FindFirstChild("TomsCrib")
+local tomHouseItems = {
+    "Red Key",
+    "White Key",
+    "Saw",
+    "Keycard",
+    "Red Key",
+    "Black Key",
+    "Taser",
+    "Pink Key",
+    "Grey Key",
+    "Hammer",
+    "Axe",
+    "Drill",
+    "Purple Key",
+    "Blue Key",
+    "Yellow Key",
+    "Lockpick",
+    "Green Key",
+    "Brown Key",
+    "Tom Clue"
+}
+
+local Lab = game:GetService("Workspace"):FindFirstChild("Lab")
+local labItems = {
+    "Red Key",
+    "Lockpick",
+    "Blue Key",
+    "Wrench",
+    "Yellow Key",
+    "Pink Key",
+    "Purple Key",
+    "Teal Key",
+    "Brown Key",
+    "White Key",
+    "Key Card",
+    "Orange Key",
+    "Grey Key",
+    "Wire Cutters",
+    "Drill",
+    "Black Key"
+}
+
+-- Ben tab
+
+b:Button(
+    "Kill Players",
+    function()
+        for i, v in pairs(game.Players:GetChildren()) do
+            if v ~= lplr and v.Character ~= nil and v.Character.Humanoid ~= nil and v.Character.HumanoidRootPart ~= nil then
+                plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+                wait(0.35)
+            end
+        end
+    end
+)
+
+-- Farm/Survivor Tab
+
+f:Toggle(
+    "Remove Traps",
+    function(bool)
+        while bool == true do
+            wait()
+            for i, v in pairs(sfx:GetChildren()) do
+                if string.find(v.Name, "Trap") then
+                    v:Remove()
+                end
+            end
+        end
+    end
+)
+
+f:Dropdown(
+    "Lab Items",
+    labItems,
+    false,
+    function(item) --true/false, replaces the current title "Dropdown" with the option that t
+        if currentMap == "Lab" then
+            if item == "Yellow Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keyyellow").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.Lab.Keys.keyyellow.Part.ClickDetector)
+                FireServer(game.Workspace.Lab.Keys.keyyellow.Part.ClickDetector.Fire)
+            elseif item == "Pink Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keypink").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.Lab.Keys.keypink.Part.ClickDetector)
+                FireServer(game.Workspace.Lab.Keys.keypink.Part.ClickDetector)
+            elseif item == "Brown Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keybrown").CFrame
+            elseif item == "Orange Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keyorange").CFrame
+            elseif item == "Drill" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("drill").CFrame
+            elseif item == "Wrench" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("wrench").CFrame
+            elseif item == "Blue Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keyblue").CFrame
+            elseif item == "Green Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keygreen").CFrame
+            elseif item == "Purple Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keypurple").CFrame
+            elseif item == "Keycard" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keycard").CFrame
+            elseif item == "White Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keywhite").CFrame
+            elseif item == "Wire Cutters" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("cutters").CFrame
+            elseif item == "Grey Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keygrey").CFrame
+            elseif item == "Lockpick" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("lockpick").CFrame
+            elseif item == "Red Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("keyred").CFrame
+            elseif item == "Taser" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").Lab.Keys:FindFirstChild("Taser").CFrame
+            end
+        end
+    end
+)
+f:Dropdown(
+    "Ben's House Items",
+    benHouseItems,
+    false,
+    function(item)
+        if currentMap == "BensHouse" then
+            if item == "Taser" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("Taser").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.Taser.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.Taser.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Red Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keyred").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Blue Key" then
+                plr.Character.HumanoidRootPart.CFrame = game.Workspace.House.Keys:FindFirstChild("keyblue").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.House.Keys.keyblue.Part.Clickdetector)
+                local event = game.Workspace.House.Keys.keyblue.Part.Clickdetector.Fire
+                event:FireServer()
+            elseif item == "Black Key" then
+                plr.Character.HumanoidRootPart.CFrame = game.Workspace.House.Keys:FindFirstChild("keyblack").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keyblack.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keyblack.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Brown Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keybrown").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keybrown.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keybrown.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Green Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keygreen").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keygreen.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keygreen.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Purple Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keypurple").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keypurple.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keypurple.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Red Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keyred").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.keyred.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "White Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("keywhite").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.House.Keys.keywhite.Part.Clickdetector)
+                local event = game.Workspace.House.Keys.keywhite.Part.Clickdetector.Fire
+                event:FireServer()
+            elseif item == "Wrench" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("wrench").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys:FindFirstChild("wrench").Part.Clickdetector)
+                local event = game:GetService("Workspace").House.Keys:FindFirstChild("wrench").Part.Clickdetector.Fire
+                event:FireServer()
+            elseif item == "Hammer" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").House.Keys:FindFirstChild("hammer").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").House.Keys.hammer.Part.ClickDetector)
+                local event = game:GetService("Workspace").House.Keys.hammer.Part.ClickDetector.Fire
+                event:FireServer()
+            end
+        end
+    end
+)
+f:Dropdown(
+    "Radio Station Items",
+    radioItems,
+    false,
+    function(item)
+        if currentMap == "RadioStation" then
+            if item == "Brown Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keybrown").CFrame
+            elseif item == "Lockpick" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("lockpick").CFrame
+            elseif item == "Taser" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("Taser").CFrame
+            elseif item == "Black Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyblack").CFrame
+            elseif item == "Tan Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keytan").CFrame
+            elseif item == "Purple Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keypurple").CFrame
+            elseif item == "White Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keywhite").CFrame
+            elseif item == "Keycard" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keycard").CFrame
+            elseif item == "Yellow Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyyellow").CFrame
+            elseif item == "C4" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("c4").CFrame
+            elseif item == "Green Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keygreen").CFrame
+            elseif item == "Wrench" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("wrench").CFrame
+            elseif item == "Blue Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyblue").CFrame
+            elseif item == "Red Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("keyred").CFrame
+            elseif item == "Hammer" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("hammer").CFrame
+            elseif item == "Axe" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").RadioStation.Keys:FindFirstChild("axe").CFrame
+            end
+        end
+    end
+)
+f:Dropdown(
+    "Tom's House Items",
+    tomHouseItems,
+    false,
+    function(item)
+        if currentMap == "TomsHouse" then
+            if item == "Red Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyred").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").TomsCrib.Keys.keyred.Part.ClickDetector)
+                local event = game:GetService("Workspace").TomsCrib.Keys.keyred.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Taser" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("Taser").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.taaser.Part.Clickdetector)
+                FireServer(game:GetService("Workspace").TomsCrib.Keys.Taser.Part.ClickDetector.Fire)
+            elseif item == "Black Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblack").CFrame
+                wait(1)
+                fireclickdetector(game:GetService("Workspace").TomsCrib.Keys.keyblack.Part.ClickDetector)
+                local event = game:GetService("Workspace").TomsCrib.Keys.keyblack.Part.ClickDetector.Fire
+                event:FireServer()
+            elseif item == "Saw" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("saw").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.saw.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.saw.Part.ClickDetector.Fire)
+            elseif item == "White Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keywhite").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keywhite.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keywhite.Part.ClickDetector.Fire)
+            elseif item == "Keycard" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblack").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keycard.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keycard.Part.ClickDetector.Fire)
+            elseif item == "Pink Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keypink").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keypink.Part.ClickDetector)
+                FireServer(game.Workspace.Keys.keypink.Part.ClickDetector.Fire)
+            elseif item == "Grey Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keygrey").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keygrey.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keygrey.Part.ClickDetector.Fire)
+            elseif item == "Hammer" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("hammer").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.hammer.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.hammer.Part.ClickDetector.Fire)
+            elseif item == "Axe" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("axe").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.axe.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.axe.Part.ClickDetector.Fire)
+            elseif item == "Drill" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("drill").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.drill.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.drill.Part.ClickDetector)
+            elseif item == "Blue Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyblue").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keyblue.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keyblue.Part.ClickDetector.Fire)
+            elseif item == "Purple Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keypurple").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keypurple.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keypurple.Part.ClickDetector.Fire)
+            elseif item == "Yellow Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keyyellow").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.keyyellow.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.keyyellow.Part.ClickDetector.Fire)
+            elseif item == "Lockpick" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("lockpick").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.Keys.lockpick.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.Keys.lockpick.Part.ClickDetector.Fire)
+            elseif item == "Green Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keygreen").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.TomsCrib.keygreen.Part.ClickDetector)
+                FireServer(game.Workspace.TomsCrib.keygreen.Part.ClickDetector.Fire)
+            elseif item == "Brown Key" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("keybrown").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.Keys.keybrown.Part.ClickDetector)
+                FireServer(game.Workspace.Keys.keybrown.Part.ClickDetector.Fire)
+            elseif item == "Tom Clue" then
+                plr.Character.HumanoidRootPart.CFrame =
+                    game:GetService("Workspace").TomsCrib.Keys:FindFirstChild("tomclue").CFrame
+                wait(1)
+                fireclickdetector(game.Workspace.Keys.tomclue.Part.ClickDetector)
+                FireServer(game.Workspace.Keys.tomclue.Part.ClickDetector.Fire)
+            end
+        end
+    end
+)
+
+-- LocalPlayer tab
+l:Slider(
+    "WalkSpeed",
+    {
+        min = 17.5, -- min value of the slider
+        max = 100, -- max value of the slider
+        precise = true -- max 2 decimals
+    },
+    function(value)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end
+)
+l:Slider(
+    "JumpPower",
+    {
+        min = 50, -- min value of the slider
+        max = 150, -- max value of the slider
+        precise = true -- max 2 decimals
+    },
+    function(value)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = value
+    end
+)
+
+-- visuals
+v:Button(
+    "ESP",
+    function()
+        ---ESP Created By 0x83
+
+        local lplr = game.Players.LocalPlayer
+        local camera = game:GetService("Workspace").CurrentCamera
+        local CurrentCamera = workspace.CurrentCamera
+        local worldToViewportPoint = CurrentCamera.worldToViewportPoint
+
+        local HeadOff = Vector3.new(0, 0.5, 0)
+        local LegOff = Vector3.new(0, 3, 0)
+
+        ---ESP Created By 0x83
+
+        for i, v in pairs(game.Players:GetChildren()) do
+            local BoxOutline = Drawing.new("Square")
+            BoxOutline.Visible = false
+            BoxOutline.Color = Color3.new(0, 0, 0)
+            BoxOutline.Thickness = 3
+            BoxOutline.Transparency = 1
+            BoxOutline.Filled = false
+
+            local Box = Drawing.new("Square")
+            Box.Visible = false
+            Box.Color = Color3.new(1, 1, 1)
+            Box.Thickness = 1
+            Box.Transparency = 1
+            Box.Filled = false
+
+            function boxesp()
+                game:GetService("RunService").RenderStepped:Connect(
+                    function()
+                        if
+                            v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and
+                                v.Character:FindFirstChild("HumanoidRootPart") ~= nil and
+                                v ~= lplr and
+                                v.Character.Humanoid.Health > 0
+                         then
+                            local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+
+                            local RootPart = v.Character.HumanoidRootPart
+                            local Head = v.Character.Head
+                            local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                            local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                            local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                            if onScreen then
+                                BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                BoxOutline.Position =
+                                    Vector2.new(
+                                    RootPosition.X - BoxOutline.Size.X / 2,
+                                    RootPosition.Y - BoxOutline.Size.Y / 2
+                                )
+                                BoxOutline.Visible = true
+
+                                Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                Box.Position =
+                                    Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                                Box.Visible = true
+
+                                if v.TeamColor == lplr.TeamColor then
+                                    BoxOutline.Color = Color3.new(0, 1, 0)
+                                    Box.Color = Color3.new(0, 1, 0)
+                                else
+                                    BoxOutline.Visible = true
+                                    Box.Visible = true
+                                    BoxOutline.Color = Color3.new(1, 0, 0)
+                                    Box.Color = Color3.new(1, 0, 0)
+                                end
+                            else
+                                BoxOutline.Visible = false
+                                Box.Visible = false
+                            end
+                        else
+                            BoxOutline.Visible = false
+                            Box.Visible = false
+                        end
+                    end
+                )
+            end
+            coroutine.wrap(boxesp)()
+        end
+
+        game.Players.PlayerAdded:Connect(
+            function(v)
+                local BoxOutline = Drawing.new("Square")
+                BoxOutline.Visible = false
+                BoxOutline.Color = Color3.new(0, 0, 0)
+                BoxOutline.Thickness = 3
+                BoxOutline.Transparency = 1
+                BoxOutline.Filled = false
+
+                local Box = Drawing.new("Square")
+                Box.Visible = false
+                Box.Color = Color3.new(1, 1, 1)
+                Box.Thickness = 1
+                Box.Transparency = 1
+                Box.Filled = false
+
+                function boxesp()
+                    game:GetService("RunService").RenderStepped:Connect(
+                        function()
+                            if
+                                v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and
+                                    v.Character:FindFirstChild("HumanoidRootPart") ~= nil and
+                                    v ~= lplr and
+                                    v.Character.Humanoid.Health > 0
+                             then
+                                local Vector, onScreen =
+                                    camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+
+                                local RootPart = v.Character.HumanoidRootPart
+                                local Head = v.Character.Head
+                                local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                                local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                                if onScreen then
+                                    BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                    BoxOutline.Position =
+                                        Vector2.new(
+                                        RootPosition.X - BoxOutline.Size.X / 2,
+                                        RootPosition.Y - BoxOutline.Size.Y / 2
+                                    )
+                                    BoxOutline.Visible = true
+
+                                    Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                    Box.Position =
+                                        Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                                    Box.Visible = true
+
+                                    if v.TeamColor == lplr.TeamColor then
+                                        BoxOutline.Visible = false
+                                        Box.Visible = false
+                                    else
+                                        BoxOutline.Visible = true
+                                        Box.Visible = true
+                                    end
+                                else
+                                    BoxOutline.Visible = false
+                                    Box.Visible = false
+                                end
+                            else
+                                BoxOutline.Visible = false
+                                Box.Visible = false
+                            end
+                        end
+                    )
+                end
+                coroutine.wrap(boxesp)()
+            end
+        )
+
+        for i, v in pairs(game:GetService("Workspace").NPCs:GetChildren()) do
+            local BoxOutline = Drawing.new("Square")
+            BoxOutline.Visible = false
+            BoxOutline.Color = Color3.new(0, 0, 0)
+            BoxOutline.Thickness = 3
+            BoxOutline.Transparency = 1
+            BoxOutline.Filled = false
+
+            local Box = Drawing.new("Square")
+            Box.Visible = false
+            Box.Color = Color3.new(1, 1, 1)
+            Box.Thickness = 1
+            Box.Transparency = 1
+            Box.Filled = false
+
+            function boxesp()
+                game:GetService("RunService").RenderStepped:Connect(
+                    function()
+                        if
+                            v ~= nil and v:FindFirstChild("Humanoid") ~= nil and
+                                v:FindFirstChild("HumanoidRootPart") ~= nil and
+                                v ~= lplr and
+                                v.Humanoid.Health > 0
+                         then
+                            local Vector, onScreen = camera:worldToViewportPoint(v.HumanoidRootPart.Position)
+
+                            local RootPart = v.HumanoidRootPart
+                            local Head = v.Head
+                            local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                            local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                            local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                            if onScreen then
+                                BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                BoxOutline.Position =
+                                    Vector2.new(
+                                    RootPosition.X - BoxOutline.Size.X / 2,
+                                    RootPosition.Y - BoxOutline.Size.Y / 2
+                                )
+                                BoxOutline.Visible = true
+
+                                Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                Box.Position =
+                                    Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                                Box.Visible = true
+                                BoxOutline.Color = Color3.new(1, 0, 0)
+                                Box.Color = Color3.new(1, 0, 0)
+                                BoxOutline.Visible = true
+                                Box.Visible = true
+                            else
+                                BoxOutline.Visible = false
+                                Box.Visible = false
+                            end
+                        else
+                            BoxOutline.Visible = false
+                            Box.Visible = false
+                        end
+                    end
+                )
+            end
+            coroutine.wrap(boxesp)()
+        end
+
+        game:GetService("Workspace").NPCs.ChildAdded:Connect(
+            function()
+                for i, v in pairs(game:GetService("Workspace").NPCs:GetChildren()) do
+                    local BoxOutline = Drawing.new("Square")
+                    BoxOutline.Visible = false
+                    BoxOutline.Color = Color3.new(0, 0, 0)
+                    BoxOutline.Thickness = 3
+                    BoxOutline.Transparency = 1
+                    BoxOutline.Filled = false
+
+                    local Box = Drawing.new("Square")
+                    Box.Visible = false
+                    Box.Color = Color3.new(1, 1, 1)
+                    Box.Thickness = 1
+                    Box.Transparency = 1
+                    Box.Filled = false
+
+                    function boxesp()
+                        game:GetService("RunService").RenderStepped:Connect(
+                            function()
+                                if
+                                    v ~= nil and v:FindFirstChild("Humanoid") ~= nil and
+                                        v:FindFirstChild("HumanoidRootPart") ~= nil and
+                                        v ~= lplr and
+                                        v.Humanoid.Health > 0
+                                 then
+                                    local Vector, onScreen = camera:worldToViewportPoint(v.HumanoidRootPart.Position)
+
+                                    local RootPart = v.HumanoidRootPart
+                                    local Head = v.Head
+                                    local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                                    local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                                    local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                                    if onScreen then
+                                        BoxOutline.Size =
+                                            Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                        BoxOutline.Position =
+                                            Vector2.new(
+                                            RootPosition.X - BoxOutline.Size.X / 2,
+                                            RootPosition.Y - BoxOutline.Size.Y / 2
+                                        )
+                                        BoxOutline.Visible = true
+                                        BoxOutline.Color = Color3.new(1, 0, 0)
+
+                                        Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                                        Box.Position =
+                                            Vector2.new(
+                                            RootPosition.X - Box.Size.X / 2,
+                                            RootPosition.Y - Box.Size.Y / 2
+                                        )
+                                        Box.Visible = true
+                                        Box.Color = Color3.new(1, 0, 0)
+
+                                        BoxOutline.Color = Color3.new(1, 0, 0)
+                                        Box.Color = Color3.new(1, 0, 0)
+                                        BoxOutline.Visible = true
+                                        Box.Visible = true
+                                    else
+                                        BoxOutline.Visible = false
+                                        Box.Visible = false
+                                    end
+                                else
+                                    BoxOutline.Visible = false
+                                    Box.Visible = false
+                                end
+                            end
+                        )
+                    end
+                    coroutine.wrap(boxesp)()
+                end
+
+                game:GetService("Workspace").NPCs.ChildAdded:Connect(
+                    function()
+                    end
+                )
+            end
+        )
+
+        ---ESP Created By 0x83
+    end
+)
+-----------------------------------------------------------------------------
+-- misc
+f:Button(
+    "Collect Coins",
+    function()
+        repeat
+            wait()
+            for i, v in pairs(sfx:GetChildren()) do
+                if v.Name == "Coin" then
+                    firetouchinterest(v, plr.Character.Head, 0)
+                end
+            end
+        until game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Left.Coins.Amount.Text == "20 / 20" or
+            game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Left.Coins.Amount.Text == "40 / 40"
+    end
+)
+
+m:Button(
+    "Remove Doors",
+    function()
+        if currentMap == "RadioStation" then
+            for i, v in pairs(game:GetService("Workspace").RadioStation.Doors:GetChildren()) do
+                if v:IsA("Part") then
+                    v.Transparency = 1
+                    v:Remove()
+                end
+            end
+        elseif currentMap == "Lab" then
+            for i, v in pairs(game:GetService("Workspace").Lab.Doors:GetChildren()) do
+                if v:IsA("Part") then
+                    v.Transparency = 1
+                    v:Remove()
+                end
+            end
+        elseif currentMap == "BensHouse" then
+            for i, v in pairs(game:GetService("Workspace").House.Doors:GetChildren()) do
+                if v:IsA("Part") then
+                    v.Transparency = 1
+                    v:Remove()
+                elseif currentMap == "TomsHouse" then
+                    for i, v in pairs(game:GetService("Workspace").TomsCrib.Doors:GetChildren()) do
+                        if v:IsA("Part") then
+                            v.Transparency = 1
+                            v:Remove()
+                        end
+                    end
+                end
+            end
+        end
+    end
+)
+m:Button(
+    "Spectate",
+    function()
+        game:GetService("Players").LocalPlayer.PlayerGui.Main.Spectate.Visible = true
+    end
+)
+
+m:Button(
+    "Redeem Codes",
+    function()
+        local ohString1 = "release"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "danzlua"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "5klikes"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "10klikes"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "15klikes"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "25klikes"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+        local ohString1 = "35klikes"
+        game:GetService("ReplicatedStorage").Remotes.VerifyTwitter:InvokeServer(ohString1)
+    end
+)
+m:DestroyGui()
+
+spawn(
+    function()
+        while wait() do
+            if game.Workspace:FindFirstChild("RadioStation") then
+                currentMap = "RadioStation"
+            elseif game.Workspace:FindFirstChild("Lab") then
+                currentMap = "Lab"
+            elseif game.Workspace:FindFirstChild("House") then
+                currentMap = "BensHouse"
+            elseif game.Workspace:FindFirstChild("TomsCrib") then
+                currentMap = "TomsHouse"
+            end
+        end
+    end
+)
+spawn(
+    function()
+        local function OnHumanoidFreeFalling()
+            while math.abs(plr.Character.HumanoidRootPart.Velocity.Y) > 0 do
+                if plr.Character.HumanoidRootPart.Position.Y < -100 then
+                    print("Falling")
+                    if currentMap == "BensHouse" then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                            CFrame.new(15.85080337524414, -21.38637351989746, -409.0588073730469)
+                    elseif currentMap == "TomsHouse" then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                            CFrame.new(227.72181701660156, 10.663657188415527, 809.138916015625)
+                    elseif currentMap == "Lab" then
+                        -- lab safeplace
+                    elseif currentMap == "RadioStation" then
+                    -- radiostation safecplace
+                    end
+                end
+                wait(0.1)
+            end
+        end
+
+        plr.Character.Humanoid.FreeFalling:Connect(OnHumanoidFreeFalling)
+    end
+)
+
+-- Teleports window
+-- ben's house
+bTP:Button(
+    "Spawn",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(18.60808753967285, -21.38637924194336, -404.3053283691406)
+        end
+    end
+)
+bTP:Button(
+    "Garage",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-26.598844528198242, -21.38637924194336, -403.24041748046875)
+        end
+    end
+)
+bTP:Button(
+    "Pantry",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-17.103628158569336, -21.386377334594727, -478.84515380859375)
+        end
+    end
+)
+bTP:Button(
+    "Bathroom",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(70.25204467773438, -21.38637924194336, -472.1925354003906)
+        end
+    end
+)
+bTP:Button(
+    "Garage Closet",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-25.697458267211914, -21.38637924194336, -444.22833251953125)
+        end
+    end
+)
+bTP:Button(
+    "Office",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-31.757863998413086, -7.13637638092041, -474.796875)
+        end
+    end
+)
+bTP:Button(
+    "Basement",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(21.478689193725586, -35.88638687133789, -429.50042724609375)
+        end
+    end
+)
+bTP:Button(
+    "Lobby",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(33.20632553100586, -21.38637924194336, -468.9964904785156)
+        end
+    end
+)
+bTP:Button(
+    "Master Bedroom",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(70.42231750488281, -7.136379241943359, -420.30364990234375)
+        end
+    end
+)
+bTP:Button(
+    "Laundry Room",
+    function()
+        if currentMap == "BensHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(73.40637969970703, -6.886378765106201, -397.6668395996094)
+        end
+    end
+)
+
+tTP:Button(
+    "Garage",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(155.86109924316406, 10.663657188415527, 787.4840087890625)
+        end
+    end
+)
+tTP:Button(
+    "Laundry Room",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(123.96994018554688, 10.663650512695312, 800.1104736328125)
+        end
+    end
+)
+tTP:Button(
+    "Lobby/Kitchen",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(263.9756164550781, 10.66365909576416, 781.787353515625)
+        end
+    end
+)
+
+tTP:Button(
+    "Bathroom",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(194.2445526123047, 25.16364288330078, 773.9126586914062)
+        end
+    end
+)
+tTP:Button(
+    "Purple Bedroom",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(127.88211822509766, 25.163658142089844, 806.5255737304688)
+        end
+    end
+)
+tTP:Button(
+    "Blue Bedroom",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(189.002197265625, 25.16364288330078, 799.255126953125)
+        end
+    end
+)
+tTP:Button(
+    "Attic Closet",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(192.15748596191406, 42.41365051269531, 804.74755859375)
+        end
+    end
+)
+tTP:Button(
+    "Attic Safe Room",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(189.59825134277344, 42.41364669799805, 739.569091796875)
+        end
+    end
+)
+tTP:Button(
+    "Study Room",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(127.3779067993164, 10.663657188415527, 745.2557983398438)
+        end
+    end
+)
+tTP:Button(
+    "Outside",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(263.9928283691406, 10.663660049438477, 659.95751953125)
+        end
+    end
+)
+tTP:Button(
+    "Storage Room",
+    function()
+        if currentMap == "TomsHouse" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(189.7828826904297, 10.663657188415527, 813.022216796875)
+        end
+    end
+)
+lTP:Button(
+    "Lab 2",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-120.83953857421875, 52.74363708496094, 27.32253074645996)
+        end
+    end
+)
+lTP:Button(
+    "Lab 1",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-83.2799301147461, 52.74363708496094, 44.63600540161133)
+        end
+    end
+)
+lTP:Button(
+    "Portal Room",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-50.314796447753906, 59.4936408996582, -117.12982177734375)
+        end
+    end
+)
+lTP:Button(
+    "Gyro Chambers",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-117.54688262939453, 52.74363708496094, -113.52072143554688)
+        end
+    end
+)
+lTP:Button(
+    "Storage Room",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(24.483957290649414, 52.7436408996582, -15.643767356872559)
+        end
+    end
+)
+lTP:Button(
+    "Experiment Room",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(23.600370407104492, 52.74363708496094, -39.30545425415039)
+        end
+    end
+)
+lTP:Button(
+    "Closet",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-126.5491943359375, 68.24362182617188, 27.937227249145508)
+        end
+    end
+)
+lTP:Button(
+    "Server Room",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-77.97293853759766, 68.2436294555664, 19.297149658203125)
+        end
+    end
+)
+lTP:Button(
+    "Lobby",
+    function()
+        if currentMap == "Lab" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-40.58793258666992, 52.7436408996582, -49.25660705566406)
+        end
+    end
+)
+rTP:Button(
+    "Studio",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-215.35609436035156, 24.49802017211914, -163.04917907714844)
+        end
+    end
+)
+rTP:Button(
+    "Abandoned Office",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-40.55872344970703, 24.24802017211914, -76.65613555908203)
+        end
+    end
+)
+rTP:Button(
+    "Green Closet",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-68.60458374023438, 24.24802017211914, -135.9033660888672)
+        end
+    end
+)
+rTP:Button(
+    "Orange Closet",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-235.14663696289062, 23.99802017211914, -69.94496154785156)
+        end
+    end
+)
+rTP:Button(
+    "Security Room",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-67.11686706542969, 24.248022079467773, -162.14002990722656)
+        end
+    end
+)
+rTP:Button(
+    "Office",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-84.1773452758789, 24.24802589416504, -73.16837310791016)
+        end
+    end
+)
+rTP:Button(
+    "Bathroom",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-197.72006225585938, 23.99802589416504, -68.58779907226562)
+        end
+    end
+)
+rTP:Button(
+    "Meeting Room",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-48.332969665527344, 24.24802017211914, -145.7962646484375)
+        end
+    end
+)
+rTP:Button(
+    "Equipment Room",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-135.28485107421875, 24.24802017211914, -177.97674560546875)
+        end
+    end
+)
+rTP:Button(
+    "Lobby",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-196.775634765625, 8.74802303314209, -124.39692687988281)
+        end
+    end
+)
+rTP:Button(
+    "Courtyard",
+    function()
+        if currentMap == "RadioStation" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(-127.35194396972656, 8.74802303314209, -138.83103942871094)
+        end
+    end
+)
