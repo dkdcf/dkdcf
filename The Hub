@@ -1,1 +1,5 @@
-print("hi")
+if game.GameID == "8583038000" then -- Ben!
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/dkdcf/dkdcf/main/Ben!%20Script"))()
+  elseif game.GameID == "3623096087" then
+    
+end
