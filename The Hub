@@ -1,5 +1,5 @@
 if game.PlaceId == 8583038000 then -- Ben!
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/dkdcf/dkdcf/main/Ben!%20Script"))() -- This script is outdated and uses a UI lib. I may or may not update it.
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/dkdcf/dkdcf/main/Ben!%20Script"))() -- This script is outdated and uses a UI lib. Currently does not support chapter 5(campsite). I may or may not update it.
   elseif game.PlaceId == 3623096087 then -- Muscle Legends
   loadstring(game:HttpGet("https://raw.githubusercontent.com/dkdcf/dkdcf/main/Muscle%20Legends%20Script"))()
 end
